@@ -1,61 +1,248 @@
-# In react component code is written inside the fragment.
-eg:- <>
-    component code
-</>
+📘 COMPLETE REACT NOTES (Beginner to Advanced)
 
-1. create a Folder 
-2. open intergrated Terminal
-3. npm init -y
-4. npm i react 
-5. npm i react-dom
-6. npm i react-scripts   
-7. create two new folder name Public and src 
-8. run run start 
-9. npm create vite@latest ./
+1️⃣ What is React?
 
+# React is a JavaScript library used to build user interfaces
 
+# Created by Facebook
 
+# Used to build Single Page Applications (SPA)
 
-# Package.json setup
+👉 React updates only the required part of the page, not the whole page.
 
-{
-  "name": "reactjs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "react-scripts start"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Nilesh-Yadav-0004/ReactJs.git"
-  },
-  "keywords": [],
-  "types": "module",
-  "author": "",
-  "license": "ISC",
-  
-  "dependencies": {
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-scripts": "^5.0.1"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+2️⃣ Why React?
+
+# Fast performance ⚡
+
+# Reusable components
+
+# Easy to manage UI
+
+# Huge community support
+
+3️⃣ How React Works?
+
+# Uses Virtual DOM
+
+# Compares old DOM with new DOM (diffing)
+
+# Updates only changed parts
+
+4️⃣ SPA vs MPA
+# SPA	MPA
+
+#One page	Multiple pages
+
+# Fast	Slow
+No reload	Reloads
+5️⃣ React Environment Setup
+npm create vite@latest my-app
+cd my-app
+npm install
+npm run dev
+6️⃣ Folder Structure
+src/
+ ├─ components/
+ ├─ App.jsx
+ ├─ main.jsx
+ ├─ index.css
+7️⃣ JSX
+JSX = JavaScript + HTML
+
+Must return single parent element
+
+const App = () => {
+  return <h1>Hello React</h1>
 }
+8️⃣ Components
+Types:
+Functional Component ✅ (most used)
+
+Class Component ❌ (old)
+
+function Header() {
+  return <h1>Header</h1>
+}
+9️⃣ Props
+Used to pass data from parent to child
+
+Read-only
+
+function Child(props) {
+  return <h1>{props.name}</h1>
+}
+🔟 State
+Used to store dynamic data
+
+Managed using useState
+
+const [count, setCount] = useState(0)
+1️⃣1️⃣ Event Handling
+<button onClick={handleClick}>Click</button>
+1️⃣2️⃣ Conditional Rendering
+{isLogin ? <Home /> : <Login />}
+1️⃣3️⃣ List Rendering
+{users.map(user => (
+  <li key={user.id}>{user.name}</li>
+))}
+1️⃣4️⃣ Keys
+Helps React identify elements
+
+Must be unique
+
+1️⃣5️⃣ Forms & Controlled Components
+<input value={name} onChange={e => setName(e.target.value)} />
+1️⃣6️⃣ useEffect Hook
+Used for:
+
+API calls
+
+Side effects
+
+Lifecycle methods
+
+useEffect(() => {
+  console.log("Component Mounted")
+}, [])
+1️⃣7️⃣ Lifecycle Phases
+Mounting
+
+Updating
+
+Unmounting
+
+1️⃣8️⃣ useRef
+Access DOM elements
+
+Store mutable values
+
+const inputRef = useRef()
+1️⃣9️⃣ useContext
+Avoid prop drilling
+
+Global data sharing
+
+2️⃣0️⃣ Prop Drilling
+Passing props through many components unnecessarily ❌
+Solution → useContext or Redux
+
+2️⃣1️⃣ React Fragment
+Avoid extra divs
+
+<>
+ <h1>Hello</h1>
+</>
+2️⃣2️⃣ CSS in React
+Normal CSS
+
+Inline CSS
+
+CSS Modules
+
+Styled Components
+
+2️⃣3️⃣ React Router
+Used for navigation
+
+<Route path="/about" element={<About />} />
+2️⃣4️⃣ useParams & useNavigate
+useParams() → get URL params
+
+useNavigate() → navigate programmatically
+
+2️⃣5️⃣ Axios / Fetch API
+Used for API calls
+
+fetch(url).then(res => res.json())
+2️⃣6️⃣ Redux (State Management)
+Centralized store
+
+Used for large apps
+
+Core Concepts:
+Store
+
+Action
+
+Reducer
+
+2️⃣7️⃣ Redux Toolkit
+Modern Redux
+
+Less boilerplate
+
+Easy setup
+
+2️⃣8️⃣ Memoization
+React.memo
+Prevents unnecessary re-render
+
+useMemo & useCallback
+Optimize performance
+
+2️⃣9️⃣ Higher Order Component (HOC)
+Component that takes another component
+
+3️⃣0️⃣ Custom Hooks
+Reusable logic
+
+function useCounter() {
+  const [count, setCount] = useState(0)
+  return { count, setCount }
+}
+3️⃣1️⃣ Error Boundary
+Catch UI errors
+
+Only works in class components
+
+3️⃣2️⃣ Lazy Loading
+Improves performance
+
+const Home = React.lazy(() => import('./Home'))
+3️⃣3️⃣ React Performance Optimization
+useMemo
+
+useCallback
+
+Lazy loading
+
+Proper keys
+
+3️⃣4️⃣ Best Practices
+✔ Small components
+✔ Reusable components
+✔ Clean folder structure
+✔ Avoid unnecessary re-renders
+
+3️⃣5️⃣ Common Interview Questions
+What is Virtual DOM?
+
+Difference between props & state?
+
+What is useEffect?
+
+Why keys are important?
+
+SPA vs MPA?
+
+Controlled vs Uncontrolled components?
+
+🎯 How to Study This
+Read section by section
+
+Practice small examples
+
+Revise hooks daily
+
+Build 1 small project (Todo / Weather / CRUD)
+
+If you want, I can also give you:
+✅ 1-page React revision sheet
+✅ React interview Q&A with answers
+✅ Mini projects with code
+
+Just tell me 👌
 
 
-# hooks are async
 
-# [{}] iska matlab Array ke andar object 
+

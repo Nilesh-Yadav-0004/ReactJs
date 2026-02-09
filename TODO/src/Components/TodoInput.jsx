@@ -1,8 +1,8 @@
 import React from 'react';
 import { Todo } from './Todo';
-
 export const TodoInput = () => {
     const [text, setText] = React.useState('');
+    
     const [todo, setTodo] = React.useState([]);
 
     const handleAdd = () => {
@@ -29,3 +29,5 @@ export const TodoInput = () => {
         </>
     );
 };
+
+
