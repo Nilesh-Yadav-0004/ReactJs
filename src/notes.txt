@@ -226,23 +226,3 @@ Why keys are important?
 SPA vs MPA?
 
 Controlled vs Uncontrolled components?
-
-🎯 How to Study This
-Read section by section
-
-Practice small examples
-
-Revise hooks daily
-
-Build 1 small project (Todo / Weather / CRUD)
-
-If you want, I can also give you:
-✅ 1-page React revision sheet
-✅ React interview Q&A with answers
-✅ Mini projects with code
-
-Just tell me 👌
-
-
-
-
